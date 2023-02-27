@@ -1,6 +1,21 @@
+/* 사용할 폰트 */
+@font-face {
+    font-family: 'OAGothic-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/OAGothic-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 태그이름을 통한 css디자인 */
 h1 {
     font-size: 2rem;
+    font-family: HS-Regular;
 }
 section {
     max-width: 1000px;
@@ -10,10 +25,12 @@ section {
 /* 클래스이름을 통한 css디자인 */
 /* header의 nav */
 .header {
-    background-color: aqua;
+    position: fixed;
+    background-color: #2D3192cc;
+    width: 100%;
+    color: white;
 }
 .header>.nav {
-    background-color: aliceblue;
     max-width: 1000px;
     box-sizing: border-box;
     margin: auto;
@@ -27,11 +44,17 @@ section {
     width: 40%;
     justify-content: space-evenly;
 }
+.header>.nav>.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-family: HS-Regular;
+    font-size: 1.2rem;
+}
 .header>.nav>.nav-title {
     width: 170px;
     text-align: center;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-family: OAGothic-ExtraBold;
 }
 
 /* main */
@@ -41,9 +64,41 @@ section {
 /* section 단위로 접근 */
 .section1-wrap {
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     height: 100vh;
     background-image: url(../img/festival.jpg);
     background-size: cover;
     background-position: center;
+}
+.section1-wrap> .section1-title {
+    color: white;
+    text-align: right;
+    padding: 250px 20px 0 20px;
+}
+.section1-wrap> .section1-title>h1 {
+    font-size: 3rem;
+}
+.section1-wrap> .section1-title>h3 {
+    font-family: 'HS-Regular';
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+/* section2 행사설명 */
+.section2-intro {
+    text-align: center;
+    padding: 40px 0;
+    line-height: 120%;
+}
+.section2-intro>.intro-title,
+.section2-intro>.intro-title>h1 {
+    margin-bottom: 20px;
+}
+.section2-intro>.intro-descript>table {
+    margin: auto;
+}
+.section2-intro>.intro-descript table td:first-child {
+    background-color: #2D3192cc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
