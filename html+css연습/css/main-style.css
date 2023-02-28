@@ -74,7 +74,11 @@ section {
     width: 80px;
     transition: all 0.5s;
 }
-.header>.nav>.nav-title {
+.header>.nav>a {
+    color: white;
+    text-decoration: none;
+}
+.header>.nav>a>.nav-title {
     width: 170px;
     text-align: center;
     font-size: 1.5rem;
