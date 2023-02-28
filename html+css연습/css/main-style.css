@@ -265,3 +265,40 @@ section {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+/* nav 모바일 버튼 */
+.nav>.mobile-button {
+    background-image: url(../img/bars-solid.svg);
+    width: 35px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* 미디어쿼리-nav */
+@media screen and (max-width:767px) {
+    .header {background-color: #EB5D99cc;}
+    .nav>.mobile-button {
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }   
+    .nav>.nav-menu {
+        flex-direction: column;
+        /*기본높이설정해야 애니메이션 변환이 보임*/
+        height: 50px;
+    }  
+    .nav>.nav-menu>li {
+        display: none;
+    } 
+    .nav>.mobile-button:hover+.nav-menu,
+    .nav>.nav-menu:hover {
+        height: 100vh;
+        transition: all 0.5s;
+    }
+    .nav>.mobile-button:hover+.nav-menu>li,
+    .nav>.nav-menu:hover>li {
+        display: inline-block;
+    }
+}

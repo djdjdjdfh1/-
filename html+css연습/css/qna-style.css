@@ -6,7 +6,7 @@
     text-align: center;
 }
 .main-qna>.section-qna>form label {
-    width: 80px;
+    width: 90px;
     display: inline-block;
 }
 .main-qna>.section-qna>form input[type="text"] {
@@ -21,6 +21,7 @@
 .main-qna>.section-qna>form>.qna-button {
     width: 300px;
     margin: auto;
+    display: block;
 }
 .main-qna>.section-qna>form input[type="checkbox"] {
     float: left;
