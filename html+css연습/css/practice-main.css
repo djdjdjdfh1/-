@@ -35,23 +35,20 @@ section {
 /* 헤더부분 */
 .header {
     background-color: #2D3192cc;
-    height: 60px;
     width: 100%;
     position: fixed;
 }
 .nav {
     max-width: 1000px;
-    height: 60px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 .nav>.nav-logo {
     width: 160px;
     text-align: center;
-}
-.nav>.nav-logo a {
     font-family: 'OAGothic-ExtraBold';
     font-size: 1.5rem;
 }
@@ -60,6 +57,7 @@ section {
     justify-content: space-evenly;
     font-family: 'TAEBAEKmilkyway';
     font-size: 1.2rem;
+    width: 40%;
 }
 .nav>.nav-menu>li {
     padding: 10px;
@@ -224,10 +222,11 @@ section {
     box-sizing: border-box;
     border-radius: 50%;
 }
+/* nav 모바일 버튼 */
 .nav-button {
     background-image: url(../img/bars-solid.svg);
     width: 35px;
-    height: 40px;
+    height: 45px;
     display: none;
     cursor: pointer;
 }
@@ -236,19 +235,26 @@ section {
 @media screen and (max-width: 767px) {
     .header {background-color: #EB5D99cc;}
     .nav-button {
+        display: inline-block;
         position: absolute;
         top: 10px;
         right: 20px;
-        display: inline-block;
     }
     .nav-menu {
         flex-direction: column;
         height: 50px;
+        transition: all 0.5s;
     }
     .nav-menu>li {
         display: none;
     }
-    .nav-button:hover+.nav {
+    .nav-button:hover+.nav-menu,
+    .nav-menu:hover {
         height: 100vh;
+        transition: all 0.5s;
+    }
+    .nav-button:hover+.nav-menu>li,
+    .nav-menu:hover>li {
+        display: inline-block;
     }
 }
